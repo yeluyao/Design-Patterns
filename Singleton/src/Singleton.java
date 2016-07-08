@@ -17,7 +17,8 @@ public class Singleton {
 	private Singleton(){
 	}
 	//静态工程方法，创建实例
-	public static Singleton getInstance(){
+	//为了能用在多线程环境下，对getInstance添加synchronized关键字
+	public static synchronized Singleton getInstance(){
 		if(instance == null){
 			instance=new Singleton();
 		}
