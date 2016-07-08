@@ -18,13 +18,15 @@ public class Singleton {
 	}
 	//静态工程方法，创建实例
 	//为了能用在多线程环境下，对getInstance添加synchronized关键字
-	/*用synchronized关键字锁住对象，会使得性能有所下降，因为每次调用getInstance()都要对对象上锁，事实上，只有在第一次
+/**
+	用synchronized关键字锁住对象，会使得性能有所下降，因为每次调用getInstance()都要对对象上锁，事实上，只有在第一次
 	创建对象的时候需要加锁，之后就不需要了，所以需要改进
-	*/
+*/
 	public static  Singleton getInstance(){
 		if(instance == null){
 			synchronized(instance){
-				instance=new Singleton();
+				if(instance==null)
+					instance=new Singleton();
 			}
 		}
 		return instance;
