@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Builder/src"/>
+	<classpathentry kind="src" path="FactoryMethod/src"/>
+	<classpathentry kind="src" path="Singleton/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Builder/bin"/>
+</classpath>
